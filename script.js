@@ -1,8 +1,9 @@
 
 const particles = document.getElementById("particles");
+const particleCount = window.matchMedia("(max-width: 760px)").matches ? 14 : 55;
 
 // Floating glowing particles
-for (let i = 0; i < 55; i++) {
+for (let i = 0; i < particleCount; i++) {
   const p = document.createElement("span");
   p.className = "particle";
   p.style.left = Math.random() * 100 + "%";
@@ -57,8 +58,9 @@ openLetter.addEventListener("click", () => {
 // Confetti effect
 function celebrate() {
   const colors = ["#ed42bc", "#ffd18a", "#ffffff", "#c084fc"];
+  const confettiCount = window.matchMedia("(max-width: 760px)").matches ? 36 : 90;
 
-  for (let i = 0; i < 90; i++) {
+  for (let i = 0; i < confettiCount; i++) {
     const piece = document.createElement("span");
     piece.style.cssText = `
       position: fixed;

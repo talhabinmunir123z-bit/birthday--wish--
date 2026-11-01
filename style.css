@@ -638,6 +638,27 @@ footer a {
 }
 
 @media (max-width: 760px) {
+  .hero::before {
+    animation: none;
+    transform: none;
+    filter: blur(1px) saturate(.55);
+    opacity: .28;
+  }
+
+  .hero::after {
+    background:
+      linear-gradient(180deg, #160c20c9 0%, #160c208c 42%, #160c20d9 100%),
+      linear-gradient(90deg, #160c205c, #160c2040);
+  }
+
+  .wave {
+    display: none;
+  }
+
+  .particle {
+    box-shadow: 0 0 6px #ff73da;
+  }
+
   .navbar {
     height: 68px;
     padding: 0 6%;
@@ -670,35 +691,53 @@ footer a {
   .hero {
     min-height: 100svh;
     height: auto;
-    padding: 88px 0 96px;
+    padding: 88px 0 82px;
   }
 
   .hero-layout {
-    width: 88%;
+    width: 86%;
     margin: 0 auto;
     flex-direction: column;
     align-items: flex-start;
-    gap: 34px;
+    gap: 28px;
   }
 
   .hero-content {
     margin-top: 0;
+    width: 100%;
+  }
+
+  .birthday-badge {
+    max-width: 100%;
+    margin-bottom: 18px;
+    font-size: 9px;
+    letter-spacing: 1.5px;
   }
 
   .hero-portrait {
     flex: none;
     align-self: center;
-    width: min(250px, 72vw);
-    padding-bottom: 42px;
+    width: min(220px, 68vw);
+    padding: 8px 8px 40px;
   }
 
   .hero-portrait img {
-    height: 280px;
+    height: 235px;
+  }
+
+  .hero-portrait figcaption {
+    right: 9px;
+    bottom: 14px;
+    left: 9px;
+    font-size: 7px;
+    letter-spacing: 1px;
   }
 
   .hero h1 {
+    margin: 20px 0;
     letter-spacing: -1px;
-    font-size: clamp(43px, 10vw, 68px);
+    font-size: clamp(28px, 9vw, 38px);
+    line-height: 1.18;
   }
 
   .eyebrow {
@@ -716,10 +755,13 @@ footer a {
   }
 
   .hero-buttons {
-    margin-top: 30px;
-    gap: 12px;
+    margin-top: 24px;
     justify-content: flex-start;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+  }
+
+  .hero-buttons .btn {
+    max-width: 100%;
   }
 
   .btn {
@@ -737,7 +779,11 @@ footer a {
   }
 
   .section {
-    padding: 85px 6%;
+    padding: 72px 6%;
+  }
+
+  .section-intro {
+    margin-bottom: 34px;
   }
 
   .memory-grid,
@@ -749,8 +795,12 @@ footer a {
     gap: 15px;
   }
 
+  .memory-content {
+    padding: 22px 18px 24px;
+  }
+
   .gallery-grid img {
-    height: 300px;
+    height: 260px;
   }
 
   .letter-card {
